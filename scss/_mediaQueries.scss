@@ -1,0 +1,12 @@
+@mixin responsive($device) {
+  @if $device == mobile {
+    @media screen and (min-width: 20em) {
+      @content;
+    }
+  }
+  @if $device == tablet {
+    @media screen and (min-width: 48em) {
+      @content;
+    }
+  }
+}
