@@ -1,0 +1,59 @@
+.what {
+  width: 100%;
+  padding: 4rem 3rem;
+  margin-bottom: 20px;
+  background: $red;
+  &__title {
+    @include title(6rem, 20px);
+    color: $dark;
+  }
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+
+    @include responsive(tablet) {
+      align-items: center;
+      gap: 2rem;
+      flex-direction: row;
+    }
+  }
+  &__haya {
+    order: 2;
+    & h3 {
+      @include title(3rem, 5px);
+      color: $white;
+      text-align: left;
+      margin-top: 20px;
+    }
+    & p {
+      margin-top: 20px;
+      font-size: 2rem;
+      font-weight: bolder;
+      line-height: 1.65;
+      color: $white;
+    }
+    & button {
+      display: block;
+      cursor: pointer;
+      outline: 0;
+      border: 0;
+      font-size: 2rem;
+      padding: 1rem 2rem;
+      color: $red;
+      border-radius: 0.5rem;
+      margin-top: 20px;
+    }
+    @include responsive(tablet) {
+      order: 1;
+    }
+  }
+  &__pic {
+    order: 1;
+    img {
+      width: 100%;
+    }
+    @include responsive(tablet) {
+      order: 2;
+    }
+  }
+}
