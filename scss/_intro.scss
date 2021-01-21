@@ -8,6 +8,9 @@
 
   &__title {
     @include title(5rem, 20px);
+    @include responsive(pc) {
+      font-size: 6rem;
+    }
   }
   &__iframe-container {
     position: relative;
@@ -30,5 +33,10 @@
     font-family: $font-primary;
     color: $white;
     margin-top: 30px;
+    @include responsive(pc) {
+      font-size: 4rem;
+      text-align: center;
+      width: 50ch;
+    }
   }
 }

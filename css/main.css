@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap");
 *,
 *::after,
 *::before {
@@ -243,6 +243,12 @@ header .nav__logo {
   font-weight: 900;
 }
 
+@media screen and (min-width: 62em) {
+  .intro__title {
+    font-size: 6rem;
+  }
+}
+
 .intro__iframe-container {
   position: relative;
   overflow: hidden;
@@ -269,5 +275,175 @@ header .nav__logo {
   font-family: "Open Sans", sans-serif;
   color: #fff;
   margin-top: 30px;
+}
+
+@media screen and (min-width: 62em) {
+  .intro__info {
+    font-size: 4rem;
+    text-align: center;
+    width: 50ch;
+  }
+}
+
+.access {
+  width: 100%;
+  padding: 4rem 2rem;
+}
+
+.access__info h2 {
+  color: #343a40;
+  font-family: "Raleway", sans-serif;
+  font-size: 3rem;
+  width: 18ch;
+  text-align: left;
+}
+
+@media screen and (min-width: 62em) {
+  .access__info h2 {
+    font-size: 6rem;
+    width: 25ch;
+  }
+}
+
+.access__info p {
+  color: #3d4246;
+  margin: 2rem 0;
+  line-height: 1.6;
+  font-size: 2rem;
+}
+
+@media screen and (min-width: 62em) {
+  .access__info p {
+    font-size: 3rem;
+    width: 80%;
+    word-spacing: 0.8rem;
+    line-height: 1.75;
+    margin: 3rem 0;
+  }
+}
+
+.access__info p span {
+  font-weight: bold;
+}
+
+@media screen and (min-width: 48em) {
+  .access__info p {
+    font-size: 3rem;
+  }
+}
+
+.access__membership {
+  display: grid;
+  place-content: center;
+  border: 1px solid red;
+  font-size: 2rem;
+  background: #f8f9fa;
+  box-shadow: 5px 5px 5px silver;
+}
+
+.access__membership h2,
+.access__membership h3,
+.access__membership h4 {
+  color: #edb100;
+  margin: 10px 0;
+}
+
+.access__membership h2 {
+  color: #343a40;
+}
+
+.access__membership h4 {
+  color: #626d78;
+}
+
+.access__membership ul {
+  display: grid;
+  grid-gap: 1rem;
+}
+
+.access__membership ul li {
+  display: grid;
+  grid-template-columns: 0 1fr;
+  grid-gap: 1.95em;
+  align-items: start;
+  line-height: 1.25;
+}
+
+.access__membership ul li::before {
+  content: attr(data-icon);
+  font-size: 1.25em;
+}
+
+.access__membership button {
+  display: block;
+  margin: 20px auto;
+  width: 80%;
+  color: #fff;
+  background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+  padding: 1rem 2rem;
+  font-size: 3rem;
+  border-radius: 5px;
+  border: none;
+  outline: 0;
+}
+
+.access__membership button:hover {
+  cursor: pointer;
+  filter: brightness(110%);
+}
+
+@media screen and (min-width: 48em) {
+  .access__membership > * {
+    font-size: 3rem;
+  }
+}
+
+.access__buttons {
+  margin: 20rem 0;
+}
+
+@media screen and (min-width: 48em) {
+  .access__buttons {
+    display: flex;
+    background: transparent;
+  }
+}
+
+.access__buttons img {
+  width: 100%;
+  height: auto;
+}
+
+.access__buttons--1, .access__buttons--2 {
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+}
+
+.access__buttons--1 button {
+  color: #fff;
+  padding: 1rem 2rem;
+  outline: 0;
+  border: 0;
+  border-radius: 5px;
+  cursor: pointer;
+  background: #134f7b;
+}
+
+.access__buttons--2 button {
+  color: #fff;
+  padding: 1rem 2rem;
+  outline: 0;
+  border: 0;
+  border-radius: 5px;
+  cursor: pointer;
+  background: #d41e4f;
+}
+
+@media screen and (min-width: 62em) {
+  .access {
+    width: 60%;
+    margin: 0 auto;
+  }
 }
 /*# sourceMappingURL=main.css.map */

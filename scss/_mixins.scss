@@ -5,3 +5,14 @@
   font-size: $size;
   font-weight: 900;
 }
+
+@mixin btns($bg-clr) {
+  color: $white;
+  padding: 1rem 2rem;
+  outline: 0;
+  border: 0;
+  border-radius: 5px;
+  cursor: pointer;
+
+  background: $bg-clr;
+}
