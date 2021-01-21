@@ -1,0 +1,34 @@
+.intro {
+  color: $light;
+  background: darken($blue, 20);
+  display: grid;
+  place-content: center;
+  width: 100%;
+  padding: 8rem;
+
+  &__title {
+    @include title(5rem, 20px);
+  }
+  &__iframe-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding-top: 56.25%; //Aspect ratio: 16:9
+
+    & iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+  &__info {
+    @include title(3rem, 0px);
+    font-family: $font-primary;
+    color: $white;
+    margin-top: 30px;
+  }
+}
