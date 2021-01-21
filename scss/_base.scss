@@ -26,6 +26,10 @@ li {
 html {
   font-size: 62.5%; //10px = 1rem
   box-sizing: border-box;
+
+  @include responsive(mobile) {
+    font-size: 43.75%;
+  }
 }
 
 body {

@@ -9,4 +9,9 @@
       @content;
     }
   }
+  @if $device == pc {
+    @media screen and (min-width: 62em) {
+      @content;
+    }
+  }
 }

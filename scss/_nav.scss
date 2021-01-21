@@ -4,7 +4,7 @@ header {
   justify-content: space-between;
   background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
   padding: 2rem;
-
+  border-bottom: 2px solid $color-white-transparent;
   //media query
   @include responsive(tablet) {
     justify-content: space-around;
@@ -14,6 +14,7 @@ header {
   .nav__logo {
     margin-left: 20px;
     width: 150px;
+    cursor: pointer;
   }
 }
 .nav {
@@ -139,7 +140,6 @@ header {
 
     &:hover {
       color: $purple;
-      padding: 0.5rem;
       border-radius: 10px;
       border: 0;
       outline: 0;

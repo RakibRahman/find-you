@@ -12,18 +12,51 @@
         <img src="img/logo.svg" alt="" />
       </div>
       <nav class="nav">
-        
-        <span class="nav__icon"></span>
+        <input type="checkbox" name="" class="nav__checkbox" id="nav__toggle" />
+        <label for="nav__toggle" class="nav__checkbox-label">
+          <span class="nav__icon"></span>
+        </label>
 
-        
-          <ul class="nav__menu-list-extend">
-            <li><a class="nav__menu-link" href="#">The Match Process</a></li>
-            <li><a class="nav__menu-link" href="#">FAQ's</a></li>
-            <li><a class="nav__menu-link" href="#">Store</a></li>
-            <li><a class="nav__menu-link" href="#">Log In</a></li>
-          </ul>
+        <div class="nav__background">
+          <div class="nav__menu">
+            <ul class="nav__menu-list-mini">
+              <li class="nav__logo-mini">
+                <img src="img/logo.svg" alt="" />
+              </li>
+              <li><a class="nav__menu-link" href="#">The Match Process</a></li>
+              <li><a class="nav__menu-link" href="#">FAQ's</a></li>
+              <li><a class="nav__menu-link" href="#">Store</a></li>
+              <li><a class="nav__menu-link" href="#">Log In</a></li>
+            </ul>
+          </div>
         </div>
       </nav>
+      <nav class="nav__extend">
+        <ul class="nav__menu-list-extend">
+          <li><a class="nav__menu-link" href="#">The Match Process</a></li>
+          <li><a class="nav__menu-link" href="#">FAQ's</a></li>
+          <li><a class="nav__menu-link" href="#">Store</a></li>
+          <li><a class="nav__menu-link" href="#">Log In</a></li>
+        </ul>
+      </nav>
     </header>
+    <!-- end of header -->
+    <section class="intro">
+      <h1 class="intro__title">100+ Matches Made So Far!</h1>
+      <div class="intro__iframe-container">
+        <iframe
+          width="768"
+          height="315"
+          src="https://www.youtube.com/embed/VYA3wvi6KvA"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+      </div>
+      <p class="intro__info">
+        98% of people said they would recommend Sunnah Match to someone else
+        looking for a spouse!
+      </p>
+    </section>
   </body>
 </html>
