@@ -1,8 +1,161 @@
-.nav__logo {
-  width: 150px;
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
+  padding: 2rem;
+
+  //media query
+  @include responsive(tablet) {
+    justify-content: space-around;
+    padding: 2rem 4rem;
+  }
+
+  .nav__logo {
+    margin-left: 20px;
+    width: 150px;
+  }
 }
 .nav {
-  &__menu-list-extend {
+  width: auto;
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  //   background-color: $dark;
+
+  //nav icon
+  &__icon {
+    position: relative;
+    cursor: pointer;
+    top: 1rem;
+    z-index: 2;
+    &,
+    &::before,
+    &::after {
+      display: block;
+      width: 4rem;
+      height: 0.3rem;
+      background: $blue;
+      transition: transform 0.3s;
+    }
+    &::after,
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      transition: transform 0.3s;
+    }
+    &::after {
+      top: 1rem;
+      background: $red;
+    }
+    &::before {
+      top: -1rem;
+      background: $red;
+    }
+  }
+  //nav hover
+  &:hover .nav__icon {
+    &::before {
+      top: -1.2rem;
+    }
+    &::after {
+      top: 1.2rem;
+    }
+  }
+  &__checkbox-label {
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+  }
+  &__checkbox:checked + &__checkbox-label &__icon {
+    background: transparent;
+  }
+  &__checkbox:checked + &__checkbox-label &__icon::before {
+    top: 0;
+    transform: rotate(135deg);
+  }
+  &__checkbox:checked + &__checkbox-label &__icon::after {
+    top: 0;
+    transform: rotate(-135deg);
+  }
+  &__checkbox {
     display: none;
+  }
+  //nav background
+  &__background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100vw;
+    height: 30vh;
+    background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+    transform: translateY(-100vh);
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+  &__checkbox:checked ~ .nav__background {
+    transform: translateY(0);
+  }
+  &__menu {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__menu-list-mini {
+    list-style: none;
+    line-height: 3rem;
+    text-align: left;
+    width: 100%;
+    & li {
+      padding: 5px 10px;
+      width: calc(100% + 30px);
+      &:hover {
+        background: lighten($tint, 80%);
+      }
+    }
+    .nav__logo-mini {
+      position: relative;
+      width: 200px;
+      height: 50px;
+      object-fit: cover;
+      margin-left: 25px;
+      margin-bottom: 5px;
+
+      &:hover {
+        background: initial;
+        cursor: pointer;
+      }
+    }
+  }
+  &__menu-link {
+    text-decoration: none;
+    font-size: 2rem;
+    color: $light;
+    min-width: 25rem;
+    margin-left: 25px;
+
+    &:hover {
+      color: $purple;
+      padding: 0.5rem;
+      border-radius: 10px;
+      border: 0;
+      outline: 0;
+    }
+  }
+  //media query
+  @include responsive(tablet) {
+    display: none;
+  }
+}
+.nav__extend {
+  display: none;
+  .nav__menu-list-extend {
+    display: flex;
+  }
+  @include responsive(tablet) {
+    display: block;
   }
 }
