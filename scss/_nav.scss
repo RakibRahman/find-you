@@ -2,9 +2,9 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
+  background-image: linear-gradient(to top, #09203f 0%, #537895 100%);
   padding: 2rem;
-  border-bottom: 2px solid $color-white-transparent;
+  border-bottom: 0.2rem solid $color-white-transparent;
   //media query
   @include responsive(tablet) {
     justify-content: space-around;
@@ -13,7 +13,7 @@ header {
 
   .nav__logo {
     margin-left: 20px;
-    width: 150px;
+    width: 250px;
     cursor: pointer;
   }
 }
