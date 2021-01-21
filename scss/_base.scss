@@ -30,6 +30,12 @@ html {
   @include responsive(mobile) {
     font-size: 43.75%;
   }
+  @include responsive(tablet) {
+    font-size: 50%;
+  }
+  @include responsive(pc) {
+    font-size: 56.25%;
+  }
 }
 
 body {
