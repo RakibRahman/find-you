@@ -8,11 +8,17 @@
 
 @mixin btns($bg-clr) {
   color: $white;
-  padding: 1rem 2rem;
+  font-size: 3rem;
+  text-transform: uppercase;
+  padding: 1.5rem 2rem;
   outline: 0;
   border: 0;
   border-radius: 5px;
   cursor: pointer;
 
   background: $bg-clr;
+
+  &:hover {
+    filter: brightness(150%);
+  }
 }

@@ -414,7 +414,9 @@ header .nav__logo {
 
 .access__buttons--1 button {
   color: #fff;
-  padding: 1rem 2rem;
+  font-size: 3rem;
+  text-transform: uppercase;
+  padding: 1.5rem 2rem;
   outline: 0;
   border: 0;
   border-radius: 5px;
@@ -422,14 +424,24 @@ header .nav__logo {
   background: #134f7b;
 }
 
+.access__buttons--1 button:hover {
+  filter: brightness(150%);
+}
+
 .access__buttons--2 button {
   color: #fff;
-  padding: 1rem 2rem;
+  font-size: 3rem;
+  text-transform: uppercase;
+  padding: 1.5rem 2rem;
   outline: 0;
   border: 0;
   border-radius: 5px;
   cursor: pointer;
   background: #d41e4f;
+}
+
+.access__buttons--2 button:hover {
+  filter: brightness(150%);
 }
 
 @media screen and (min-width: 62em) {
@@ -441,9 +453,7 @@ header .nav__logo {
 
 .what {
   width: 100%;
-  padding: 4rem 3rem;
   margin-bottom: 20px;
-  background: #dc3545;
 }
 
 .what__title {
@@ -456,23 +466,29 @@ header .nav__logo {
 }
 
 .what__wrapper {
+  padding: 4rem 2rem;
+  margin-bottom: 5rem;
+}
+
+.what__wrapper:nth-child(odd) {
+  background: #fff;
+}
+
+.what__wrapper:nth-child(even) {
+  background: #dc3545;
+}
+
+.what__info {
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
-@media screen and (min-width: 48em) {
-  .what__wrapper {
-    align-items: center;
-    gap: 2rem;
-    flex-direction: row;
-  }
+.what__info--content-up {
+  order: 1;
 }
 
-.what__haya {
-  order: 2;
-}
-
-.what__haya h3 {
+.what__info h3 {
   text-align: center;
   margin-bottom: 5px;
   font-family: "Raleway", sans-serif;
@@ -481,45 +497,75 @@ header .nav__logo {
   color: #fff;
   text-align: left;
   margin-top: 20px;
+  font-size: 5rem;
 }
 
-.what__haya p {
+.what__info p {
   margin-top: 20px;
-  font-size: 2rem;
+  font-size: 2.2rem;
   font-weight: bolder;
-  line-height: 1.65;
+  line-height: 1.75;
   color: #fff;
 }
 
-.what__haya button {
-  display: block;
-  cursor: pointer;
-  outline: 0;
-  border: 0;
-  font-size: 2rem;
-  padding: 1rem 2rem;
-  color: #dc3545;
-  border-radius: 0.5rem;
-  margin-top: 20px;
+.what__info--2 h3,
+.what__info--2 p, .what__info--4 h3,
+.what__info--4 p {
+  color: #343a40;
 }
 
 @media screen and (min-width: 48em) {
-  .what__haya {
-    order: 1;
+  .what__info {
+    padding-left: 10rem;
+    flex-direction: row;
+    justify-content: space-around;
   }
-}
-
-.what__pic {
-  order: 1;
+  .what__info p {
+    width: 90%;
+  }
 }
 
 .what__pic img {
   width: 100%;
+  height: auto;
 }
 
 @media screen and (min-width: 48em) {
   .what__pic {
-    order: 2;
+    order: 1;
+    margin-right: 10rem;
+  }
+}
+
+.what__button {
+  color: #fff;
+  font-size: 3rem;
+  text-transform: uppercase;
+  padding: 1.5rem 2rem;
+  outline: 0;
+  border: 0;
+  border-radius: 5px;
+  cursor: pointer;
+  background: #fff;
+  color: #dc3545;
+  margin: 20px 0;
+  width: 250px;
+}
+
+.what__button:hover {
+  filter: brightness(150%);
+}
+
+.what__button--2, .what__button--4 {
+  color: #fff;
+  background: #064c79;
+}
+
+@media screen and (min-width: 48em) {
+  .what__button {
+    display: block;
+    margin: 20px auto;
+    width: auto;
   }
 }
 /*# sourceMappingURL=main.css.map */
