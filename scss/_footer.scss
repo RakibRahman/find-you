@@ -1,0 +1,30 @@
+.footer {
+  background: $dark;
+  padding: 2rem 0.5rem;
+  font-size: 3rem;
+  color: $white;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 2rem;
+  @include responsive(tablet) {
+    flex-direction: row;
+  }
+  &__logo {
+    img {
+      width: 100px;
+    }
+  }
+
+  &__menu-list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2rem;
+    & a {
+      text-decoration: none;
+      color: $white;
+    }
+  }
+}

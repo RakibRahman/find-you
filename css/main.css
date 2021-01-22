@@ -671,4 +671,38 @@ header .nav__logo {
     max-width: 350px;
   }
 }
+
+.footer {
+  background: #343a40;
+  padding: 2rem 0.5rem;
+  font-size: 3rem;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 2rem;
+}
+
+@media screen and (min-width: 48em) {
+  .footer {
+    flex-direction: row;
+  }
+}
+
+.footer__logo img {
+  width: 100px;
+}
+
+.footer__menu-list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.footer__menu-list a {
+  text-decoration: none;
+  color: #fff;
+}
 /*# sourceMappingURL=main.css.map */
